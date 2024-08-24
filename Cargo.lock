@@ -5164,6 +5164,7 @@ dependencies = [
  "thiserror",
  "toml",
  "tracing",
+ "url",
  "uv-configuration",
  "uv-fs",
  "uv-macros",

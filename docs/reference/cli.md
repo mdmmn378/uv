@@ -308,6 +308,10 @@ uv run [OPTIONS] <COMMAND>
 
 <li><code>lowest-direct</code>:  Resolve the lowest compatible version of any direct dependencies, and the highest compatible version of any transitive dependencies</li>
 </ul>
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -725,6 +729,10 @@ uv add [OPTIONS] <PACKAGES|--requirements <REQUIREMENTS>>
 
 </dd><dt><code>--tag</code> <i>tag</i></dt><dd><p>Tag to use when adding a dependency from Git</p>
 
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -984,6 +992,10 @@ uv remove [OPTIONS] <PACKAGES>...
 </dd><dt><code>--script</code> <i>script</i></dt><dd><p>Remove the dependency from the specified Python script, rather than from a project.</p>
 
 <p>If provided, uv will remove the dependency from the script&#8217;s inline metadata table, in adhere with PEP 723.</p>
+
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
 
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
@@ -1263,6 +1275,10 @@ uv sync [OPTIONS]
 
 <li><code>lowest-direct</code>:  Resolve the lowest compatible version of any direct dependencies, and the highest compatible version of any transitive dependencies</li>
 </ul>
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -1491,6 +1507,10 @@ uv lock [OPTIONS]
 
 <li><code>lowest-direct</code>:  Resolve the lowest compatible version of any direct dependencies, and the highest compatible version of any transitive dependencies</li>
 </ul>
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -1771,6 +1791,10 @@ uv tree [OPTIONS]
 
 <li><code>lowest-direct</code>:  Resolve the lowest compatible version of any direct dependencies, and the highest compatible version of any transitive dependencies</li>
 </ul>
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--universal</code></dt><dd><p>Show a platform-independent dependency tree.</p>
 
 <p>Shows resolved package versions for all Python versions and platforms, rather than filtering to those that are relevant for the current environment.</p>
@@ -2045,6 +2069,10 @@ uv tool run [OPTIONS] [COMMAND]
 
 <li><code>lowest-direct</code>:  Resolve the lowest compatible version of any direct dependencies, and the highest compatible version of any transitive dependencies</li>
 </ul>
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -2285,6 +2313,10 @@ uv tool install [OPTIONS] <PACKAGE>
 
 <li><code>lowest-direct</code>:  Resolve the lowest compatible version of any direct dependencies, and the highest compatible version of any transitive dependencies</li>
 </ul>
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -2515,6 +2547,10 @@ uv tool upgrade [OPTIONS] <NAME>
 
 <li><code>lowest-direct</code>:  Resolve the lowest compatible version of any direct dependencies, and the highest compatible version of any transitive dependencies</li>
 </ul>
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -3904,6 +3940,10 @@ uv pip compile [OPTIONS] <SRC_FILE>...
 
 <p>By default, uv uses the virtual environment in the current working directory or any parent directory, falling back to searching for a Python executable in <code>PATH</code>. The <code>--system</code> option instructs uv to avoid using a virtual environment Python and restrict its search to the system path.</p>
 
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--universal</code></dt><dd><p>Perform a universal resolution, attempting to generate a single <code>requirements.txt</code> output file that is compatible with all operating systems, architectures, and Python implementations.</p>
 
 <p>In universal mode, the current Python version (or user-provided <code>--python-version</code>) will be treated as a lower bound. For example, <code>--universal --python-version 3.7</code> would produce a universal resolution for Python 3.7 and later.</p>
@@ -4200,6 +4240,10 @@ uv pip sync [OPTIONS] <SRC_FILE>...
 <p>WARNING: <code>--system</code> is intended for use in continuous integration (CI) environments and should be used with caution, as it can modify the system Python installation.</p>
 
 </dd><dt><code>--target</code> <i>target</i></dt><dd><p>Install packages into the specified directory, rather than into the virtual or system Python environment. The packages will be installed at the top-level of the directory</p>
+
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
 
 </dd><dt><code>--verbose</code>, <code>-v</code></dt><dd><p>Use verbose output.</p>
 
@@ -4550,6 +4594,10 @@ uv pip install [OPTIONS] <PACKAGE|--requirement <REQUIREMENT>|--editable <EDITAB
 
 </dd><dt><code>--target</code> <i>target</i></dt><dd><p>Install packages into the specified directory, rather than into the virtual or system Python environment. The packages will be installed at the top-level of the directory</p>
 
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
+
 </dd><dt><code>--upgrade</code>, <code>-U</code></dt><dd><p>Allow package upgrades, ignoring pinned versions in any existing output file. Implies <code>--refresh</code></p>
 
 </dd><dt><code>--upgrade-package</code>, <code>-P</code> <i>upgrade-package</i></dt><dd><p>Allow upgrades for a specific package, ignoring pinned versions in any existing output file. Implies <code>--refresh-package</code></p>
@@ -4679,6 +4727,10 @@ uv pip uninstall [OPTIONS] <PACKAGE|--requirement <REQUIREMENT>>
 <p>WARNING: <code>--system</code> is intended for use in continuous integration (CI) environments and should be used with caution, as it can modify the system Python installation.</p>
 
 </dd><dt><code>--target</code> <i>target</i></dt><dd><p>Uninstall packages from the specified <code>--target</code> directory</p>
+
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
 
 </dd><dt><code>--verbose</code>, <code>-v</code></dt><dd><p>Use verbose output.</p>
 
@@ -5385,6 +5437,10 @@ uv venv [OPTIONS] [NAME]
 </dd><dt><code>--system-site-packages</code></dt><dd><p>Give the virtual environment access to the system site packages directory.</p>
 
 <p>Unlike <code>pip</code>, when a virtual environment is created with <code>--system-site-packages</code>, uv will <em>not</em> take system site packages into account when running commands like <code>uv pip list</code> or <code>uv pip install</code>. The <code>--system-site-packages</code> flag will provide the virtual environment with access to the system site packages directory at runtime, but will not affect the behavior of uv commands.</p>
+
+</dd><dt><code>--trusted-host</code> <i>trusted-host</i></dt><dd><p>A list of trusted hostnames for SSL connections.</p>
+
+<p>WARNING: Hosts included in this list will not be verified against the system&#8217;s certificate store.</p>
 
 </dd><dt><code>--verbose</code>, <code>-v</code></dt><dd><p>Use verbose output.</p>
 

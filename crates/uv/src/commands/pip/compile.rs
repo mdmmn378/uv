@@ -5,13 +5,13 @@ use std::path::Path;
 
 use anstream::{eprint, AutoStream};
 use anyhow::{anyhow, Result};
-use itertools::Itertools;
-use owo_colors::OwoColorize;
-use tracing::debug;
-
 use distribution_types::{IndexLocations, UnresolvedRequirementSpecification, Verbatim};
 use install_wheel_rs::linker::LinkMode;
+use itertools::Itertools;
+use owo_colors::OwoColorize;
 use pypi_types::Requirement;
+use tracing::debug;
+use url::Url;
 use uv_auth::store_credentials_from_url;
 use uv_cache::Cache;
 use uv_client::{BaseClientBuilder, Connectivity, FlatIndexClient, RegistryClientBuilder};
@@ -74,6 +74,7 @@ pub(crate) async fn pip_compile(
     index_locations: IndexLocations,
     index_strategy: IndexStrategy,
     keyring_provider: KeyringProviderType,
+    trusted_host: Vec<Url>,
     config_settings: ConfigSettings,
     connectivity: Connectivity,
     no_build_isolation: bool,
@@ -106,7 +107,8 @@ pub(crate) async fn pip_compile(
     let client_builder = BaseClientBuilder::new()
         .connectivity(connectivity)
         .native_tls(native_tls)
-        .keyring(keyring_provider);
+        .keyring(keyring_provider)
+        .trusted_host(trusted_host);
 
     // Read all requirements from the provided sources.
     let RequirementsSpecification {

@@ -200,6 +200,9 @@ pub(super) async fn do_sync(
     // Read the lockfile.
     let resolution = lock.to_resolution(project, markers, tags, extras, &dev)?;
 
+    // Always skip virtual projects, which shouldn't be built or installed.
+    let resolution = apply_no_virtual_project(resolution, project);
+
     // If `--no-install-project` is set, remove the project itself.
     let resolution = apply_no_install_project(no_install_project, resolution, project);
 
@@ -295,6 +298,35 @@ pub(super) async fn do_sync(
     .await?;
 
     Ok(())
+}
+
+/// Filter out any virtual workspace members.
+fn apply_no_virtual_project(
+    resolution: distribution_types::Resolution,
+    project: &VirtualProject,
+) -> distribution_types::Resolution {
+    let VirtualProject::Project(project) = project else {
+        // If the project is _only_ a virtual workspace root, we don't need to filter it out.
+        return resolution;
+    };
+
+    let virtual_members = project
+        .workspace()
+        .packages()
+        .iter()
+        .filter_map(|(name, package)| {
+            // A project is virtual if it's explicitly marked as virtual, _or_ if it's missing a
+            // build system.
+            if package.pyproject_toml().is_virtual() {
+                Some(name)
+            } else {
+                None
+            }
+        })
+        .collect::<FxHashSet<_>>();
+
+    // Remove any virtual members from the resolution.
+    resolution.filter(|dist| !virtual_members.contains(dist.name()))
 }
 
 fn apply_no_install_project(

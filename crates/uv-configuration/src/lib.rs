@@ -11,6 +11,7 @@ pub use package_options::*;
 pub use preview::*;
 pub use sources::*;
 pub use target_triple::*;
+pub use trusted_host::*;
 
 mod authentication;
 mod build_options;
@@ -25,3 +26,4 @@ mod package_options;
 mod preview;
 mod sources;
 mod target_triple;
+mod trusted_host;
